@@ -1,11 +1,5 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/assets/(.*)",
-      "destination": "/public/assets/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/assets/images/(.*)\\.svg",
