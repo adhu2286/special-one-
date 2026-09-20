@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="mallGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e879f9"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <!-- Modern architectural facade / atrium roof -->
+  <path d="M20 78 V40 L50 22 L80 40 V78 H20 Z" stroke="url(#mallGrad)" stroke-width="2" fill="rgba(168, 85, 247, 0.1)"/>
+  <!-- Glass Atrium Dome lines -->
+  <path d="M50 22 V78 M35 31 V78 M65 31 V78" stroke="url(#mallGrad)" stroke-width="1.4" opacity="0.6"/>
+  <path d="M20 52 H80 M20 65 H80" stroke="url(#mallGrad)" stroke-width="1.2" opacity="0.4"/>
+  <!-- Glowing entrance -->
+  <rect x="42" y="60" width="16" height="18" rx="2" stroke="#f5d0fe" stroke-width="2" fill="rgba(245, 208, 254, 0.25)"/>
+  <!-- Shopping / Fun Sparkles & Warm City Lights -->
+  <circle cx="30" cy="35" r="2" fill="#fef08a"/>
+  <circle cx="70" cy="35" r="2" fill="#fef08a"/>
+  <circle cx="50" cy="42" r="2.5" fill="#fef08a"/>
+  <!-- Subtle shopping bag silhouette -->
+  <path d="M72 68 H84 V82 H72 Z M75 68 C75 64 81 64 81 68" stroke="#e9d5ff" stroke-width="1.5" fill="none"/>
+</svg>

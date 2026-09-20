@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="A cinematic birthday surprise made with memories for Gukki by Adii.">
+  <title>A Little Surprise for Gukki 💜</title>
+
+  <!-- Preconnect to Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Particle & Lily Petal Canvas -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- Deep Purple Radial Vignette Background -->
+  <div class="bg-vignette"></div>
+
+  <!-- Persistent Top Navigation & Audio Control Bar -->
+  <header class="top-nav-bar hidden-on-scene-1" id="topNavBar">
+    <div class="nav-brand">
+      <span class="nav-brand-title">For Gukki 🤍</span>
+    </div>
+
+    <!-- Chapter Progress Track -->
+    <div class="scene-progress-container">
+      <div class="progress-track">
+        <div class="progress-fill" id="sceneProgressBar"></div>
+      </div>
+      <span class="chapter-number" id="chapterNumber">1 / 9</span>
+    </div>
+
+    <!-- Music On / Off Pill Control -->
+    <button class="music-toggle-btn" id="musicToggleBtn" type="button" aria-label="Toggle background music">
+      <div class="music-visualizer" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <span id="musicLabel">Music Off</span>
+    </button>
+  </header>
+
+  <!-- Main Interactive Cinematic Stage -->
+  <main class="main-stage" id="mainStage">
+
+    <!-- ===================================================================
+         SCENE 1 — SECRET OPENING
+         =================================================================== -->
+    <section class="scene active" id="scene-1" aria-label="Secret Opening">
+      <div class="scene-inner">
+        <!-- Glowing White Lily -->
+        <div class="white-lily-container" aria-hidden="true">
+          <div class="white-lily-aura"></div>
+          <img src="/assets/images/white-lily.svg" alt="" class="white-lily-img">
+        </div>
+
+        <h1 class="scene-title">Hey Gukki...</h1>
+        <p class="scene-subtitle">Someone made a little something for you.</p>
+
+        <button class="btn-cinematic" id="openSecretBtn" type="button">
+          <span>Open</span>
+          <span aria-hidden="true">✦</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 2 — BIRTHDAY REVEAL
+         =================================================================== -->
+    <section class="scene" id="scene-2" aria-label="Birthday Reveal">
+      <div class="scene-inner">
+        <div id="celebrationBurst" aria-hidden="true"></div>
+
+        <div class="date-badge">23 September</div>
+
+        <h1 class="scene-title large">Happy Birthday, Gukki 💜</h1>
+        
+        <p class="scene-subtitle">There's a little journey waiting for you...</p>
+
+        <button class="btn-cinematic" id="startJourneyBtn" type="button">
+          <span>Start</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 3 — A LITTLE NOTE
+         =================================================================== -->
+    <section class="scene" id="scene-3" aria-label="A Little Note">
+      <div class="scene-inner">
+        <div class="white-lily-container small" aria-hidden="true">
+          <div class="white-lily-aura"></div>
+          <img src="/assets/images/white-lily.svg" alt="" class="white-lily-img">
+        </div>
+
+        <div class="story-card">
+          <p class="story-line">This isn't a big gift...</p>
+          <p class="story-line quote">Just a few memories from someone who's really lucky to have you as a friend.</p>
+          <p class="story-line highlight">Some things are easier to write than to say.</p>
+        </div>
+
+        <button class="btn-cinematic" id="noteContinueBtn" type="button">
+          <span>Continue</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 4 — HOW WE MET
+         =================================================================== -->
+    <section class="scene" id="scene-4" aria-label="How We Met">
+      <div class="scene-inner">
+        <h2 class="scene-title">How We Met 🤍</h2>
+
+        <div class="story-card">
+          <p class="story-line quote">
+            "Ava akka enoda friend. Ava dhaan 'en thangachi' nu intro kudutha appo dhaan namma first meet pannom."
+          </p>
+          <p class="story-line">
+            Adhukku apram...
+          </p>
+          <p class="story-line highlight">
+            Epadi nu theriyala, apadiye friends aaitom.
+          </p>
+          <p class="story-line">
+            And somehow... I'm really glad we did.
+          </p>
+        </div>
+
+        <button class="btn-cinematic" id="metContinueBtn" type="button">
+          <span>Our Adventure →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 5 — OUR LITTLE CHENNAI ADVENTURE
+         =================================================================== -->
+    <section class="scene" id="scene-5" aria-label="Our Little Chennai Adventure">
+      <div class="scene-inner">
+        <h2 class="scene-title">Our Little Chennai Adventure 🌆</h2>
+
+        <p class="scene-subtitle">
+          "Oru naal... yaarukkum theriyama, namma rendu perum suthuna andha day."
+        </p>
+
+        <!-- 4 Journey Stops Timeline -->
+        <div class="adventure-timeline" role="list">
+          <!-- Stop 1: Temple -->
+          <div class="adventure-stop" role="listitem" tabindex="0">
+            <div class="stop-icon-wrap">
+              <img src="/assets/images/temple-icon.svg" alt="" class="stop-icon">
+            </div>
+            <div class="stop-content">
+              <div class="stop-name">Temple</div>
+              <div class="stop-badge">Stop 1</div>
+            </div>
+          </div>
+
+          <!-- Stop 2: Lake -->
+          <div class="adventure-stop" role="listitem" tabindex="0">
+            <div class="stop-icon-wrap">
+              <img src="/assets/images/lake-icon.svg" alt="" class="stop-icon">
+            </div>
+            <div class="stop-content">
+              <div class="stop-name">Lake</div>
+              <div class="stop-badge">Stop 2</div>
+            </div>
+          </div>
+
+          <!-- Stop 3: Mall -->
+          <div class="adventure-stop" role="listitem" tabindex="0">
+            <div class="stop-icon-wrap">
+              <img src="/assets/images/mall-icon.svg" alt="" class="stop-icon">
+            </div>
+            <div class="stop-content">
+              <div class="stop-name">Mall</div>
+              <div class="stop-badge">Stop 3</div>
+            </div>
+          </div>
+
+          <!-- Stop 4: Beach -->
+          <div class="adventure-stop" role="listitem" tabindex="0">
+            <div class="stop-icon-wrap">
+              <img src="/assets/images/beach-icon.svg" alt="" class="stop-icon">
+            </div>
+            <div class="stop-content">
+              <div class="stop-name">Beach</div>
+              <div class="stop-badge">Stop 4</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="adventure-summary-box">
+          <p class="story-line">Just a simple day...</p>
+          <p class="story-line highlight">...that somehow became a beautiful memory.</p>
+        </div>
+
+        <button class="btn-cinematic" id="adventureContinueBtn" type="button">
+          <span>Our Moments →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 6 — OUR PHOTOS
+         =================================================================== -->
+    <section class="scene" id="scene-6" aria-label="Our Photos">
+      <div class="scene-inner">
+        <h2 class="scene-title">Our Photos 📸</h2>
+
+        <div class="photo-gallery-wrapper">
+          <!-- Polaroid Deck -->
+          <div class="polaroid-deck" id="polaroidDeck">
+            <!-- Photo 1 -->
+            <div class="polaroid-card active" data-index="0" aria-label="Photo 1">
+              <div class="polaroid-img-frame">
+                <img src="/assets/photos/photo1.jpg" alt="Memory 1" class="polaroid-img" loading="eager">
+              </div>
+              <div class="polaroid-caption">Just another day...</div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="polaroid-card" data-index="1" aria-label="Photo 2">
+              <div class="polaroid-img-frame">
+                <img src="/assets/photos/photo2.jpg" alt="Memory 2" class="polaroid-img" loading="lazy">
+              </div>
+              <div class="polaroid-caption">...that somehow became a memory.</div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="polaroid-card" data-index="2" aria-label="Photo 3">
+              <div class="polaroid-img-frame">
+                <img src="/assets/photos/photo3.jpg" alt="Memory 3" class="polaroid-img" loading="lazy">
+              </div>
+              <div class="polaroid-caption">One I'll always remember.</div>
+            </div>
+          </div>
+
+          <!-- Gallery Navigation Controls -->
+          <div class="gallery-controls">
+            <button class="gallery-arrow-btn" id="photoPrevBtn" type="button" aria-label="Previous photo">←</button>
+            <div class="photo-dots" role="tablist">
+              <span class="photo-dot active" role="tab" aria-label="Photo 1"></span>
+              <span class="photo-dot" role="tab" aria-label="Photo 2"></span>
+              <span class="photo-dot" role="tab" aria-label="Photo 3"></span>
+            </div>
+            <button class="gallery-arrow-btn" id="photoNextBtn" type="button" aria-label="Next photo">→</button>
+          </div>
+
+          <!-- Post-Gallery Reflection (Revealed on 3rd photo) -->
+          <div class="photo-ending-text" id="photoEndingText">
+            <p class="story-line">And these are the moments I want to keep.</p>
+            <p class="story-line highlight">Some memories don't need a reason.</p>
+          </div>
+
+          <button class="btn-cinematic" id="photoAdvanceBtn" type="button">
+            <span>Why You're Special →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 7 — WHY YOU'RE SPECIAL
+         =================================================================== -->
+    <section class="scene" id="scene-7" aria-label="Why You're Special">
+      <div class="scene-inner">
+        <!-- Glowing White Lily -->
+        <div class="white-lily-container small" aria-hidden="true">
+          <div class="white-lily-aura"></div>
+          <img src="/assets/images/white-lily.svg" alt="" class="white-lily-img">
+        </div>
+
+        <h2 class="scene-title">Why You're Special 🤍</h2>
+
+        <!-- Three Qualities -->
+        <div class="qualities-grid">
+          <div class="quality-chip">Good-hearted</div>
+          <div class="quality-chip">Caring</div>
+          <div class="quality-chip">Understanding</div>
+        </div>
+
+        <div class="story-card">
+          <p class="story-line quote">
+            "Naan enna solla varenu complete-ah sollradhukku munnadiye purinjikira oru person nee."
+          </p>
+          <p class="story-line highlight">
+            And that's something really special.
+          </p>
+        </div>
+
+        <button class="btn-cinematic" id="specialAdvanceBtn" type="button">
+          <span>Read Adii's Letter →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 8 — THE LETTER
+         =================================================================== -->
+    <section class="scene" id="scene-8" aria-label="The Letter">
+      <div class="scene-inner">
+        <h2 class="scene-title">A Letter for You ✉️</h2>
+
+        <div class="envelope-wrapper">
+          <!-- 3D Interactive Envelope -->
+          <div class="envelope-container" id="envelopeContainer">
+            <div class="envelope-flap"></div>
+            <div class="envelope-seal">For Gukki 🤍</div>
+          </div>
+
+          <button class="btn-cinematic" id="openLetterBtn" type="button" style="margin-top: 20px;">
+            <span>Open my letter</span>
+            <span aria-hidden="true">✉</span>
+          </button>
+
+          <!-- Letter Sheet Unfolding -->
+          <article class="letter-sheet" id="letterSheet">
+            <div class="letter-salutation">Hi Gukki,</div>
+            <div class="letter-body">
+              <p>Enaku ipadi letter lam eluthi palakam illa… ethо enna mudincha alavuku eluthi iruken.</p>
+
+              <p>Idhu naan solliye aaganum…</p>
+
+              <p>Nee romba nalla ponnu. Unna maari oru friend enakku kedaichadhu na, naan romba lucky-nu dhaan sollanum.</p>
+
+              <p>Namma epdi friends aanom nu enakkum exact-ah theriyadhu. Apadiye friends aaitom… but somewhere along the way, nee enakku romba important-a aayita.</p>
+
+              <p>Nee romba caring. Naan enna solla varenu complete-ah sollradhukku munnadiye purinjikira oru person nee.</p>
+
+              <p class="highlight">Un friend-ah irukkuradhuku romba nandri Gukki. 🤍</p>
+
+              <p>Innaiku un birthday…</p>
+
+              <p>So first of all,</p>
+
+              <p class="highlight">Happy Birthday! 🎂💜</p>
+
+              <p>Un life-la nee always happy-ah irukanum. Unakku pidichadhellam nadakanum. And always ipdiye nalla ponna irukanum.</p>
+
+              <p>Once again,</p>
+
+              <p class="highlight">Happy Birthday Gukki. 🤍</p>
+            </div>
+
+            <div class="letter-signoff">— Adii</div>
+          </article>
+
+          <button class="btn-cinematic" id="letterAdvanceBtn" type="button">
+            <span>Final Note 💜</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SCENE 9 — FINAL EMOTIONAL REVEAL
+         =================================================================== -->
+    <section class="scene" id="scene-9" aria-label="Final Reveal">
+      <div class="scene-inner">
+        <!-- Glowing White Lily -->
+        <div class="white-lily-container large" aria-hidden="true">
+          <div class="white-lily-aura"></div>
+          <img src="/assets/images/white-lily.svg" alt="" class="white-lily-img">
+        </div>
+
+        <div class="final-text-stack">
+          <p class="final-quote">Some people enter your life...</p>
+          <p class="final-quote">...and somehow become a part of it.</p>
+          
+          <h2 class="scene-title large" style="margin-top: 10px;">Happy Birthday, Gukki 💜</h2>
+
+          <p class="scene-subtitle" style="margin-bottom: 0;">Thank you for being my friend.</p>
+
+          <div class="final-signature">— Adii</div>
+
+          <div class="final-badge">Made with memories 🤍</div>
+        </div>
+
+        <button class="btn-cinematic ghost" id="replayBtn" type="button">
+          <span>Replay Experience ↺</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="/js/canvas-particles.js"></script>
+  <script src="/js/audio-player.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

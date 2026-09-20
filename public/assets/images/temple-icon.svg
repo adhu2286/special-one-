@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="templeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf4ff" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <radialGradient id="tBackdrop" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#1e0b36" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="url(#tBackdrop)" />
+  <circle cx="50" cy="50" r="44" stroke="url(#templeGlow)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" fill="none" />
+  
+  <!-- Temple Kalasam (Spire Pinnacles) -->
+  <circle cx="50" cy="18" r="2.5" fill="#fef08a" />
+  <path d="M 48 20 L 52 20 L 51 25 L 49 25 Z" fill="#fde047" />
+
+  <!-- Gopuram Tiered Tower Levels -->
+  <!-- Tier 1 (Top) -->
+  <path d="M 43 26 L 57 26 L 55 33 L 45 33 Z" fill="url(#templeGlow)" />
+  <!-- Tier 2 -->
+  <path d="M 39 34 L 61 34 L 59 43 L 41 43 Z" fill="url(#templeGlow)" opacity="0.9" />
+  <rect x="47.5" y="36" width="5" height="5" rx="1" fill="#2e1065" />
+  <!-- Tier 3 -->
+  <path d="M 35 44 L 65 44 L 63 55 L 37 55 Z" fill="url(#templeGlow)" opacity="0.95" />
+  <rect x="43" y="47" width="4" height="6" rx="1" fill="#2e1065" />
+  <rect x="53" y="47" width="4" height="6" rx="1" fill="#2e1065" />
+  <!-- Tier 4 (Base Level) -->
+  <path d="M 31 56 L 69 56 L 68 70 L 32 70 Z" fill="url(#templeGlow)" />
+  <!-- Sanctum Arch Doorway -->
+  <path d="M 44 70 L 44 60 C 44 57 56 57 56 60 L 56 70 Z" fill="#1e0b36" />
+  <!-- Temple Steps -->
+  <rect x="25" y="70" width="50" height="4" rx="2" fill="url(#templeGlow)" />
+  <rect x="22" y="74" width="56" height="3" rx="1.5" fill="#e9d5ff" opacity="0.7" />
+  
+  <!-- Subtle star glint -->
+  <circle cx="72" cy="28" r="1.5" fill="#fef08a" opacity="0.8" />
+</svg>

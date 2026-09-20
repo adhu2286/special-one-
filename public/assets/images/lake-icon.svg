@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lakeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0e7ff" />
+      <stop offset="50%" stop-color="#a5b4fc" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <radialGradient id="lBackdrop" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#1e0b36" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0e7ff" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="url(#lBackdrop)" />
+  <circle cx="50" cy="50" r="44" stroke="url(#lakeGlow)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6" fill="none" />
+
+  <!-- Crescent Moon in the calm night sky -->
+  <path d="M 68 22 A 12 12 0 0 0 54 36 A 12 12 0 0 1 66 22 Z" fill="url(#moonGrad)" />
+  
+  <!-- Subtle distant tree / shoreline silhouette -->
+  <path d="M 22 55 Q 35 48 50 52 Q 65 47 78 55 L 78 57 L 22 57 Z" fill="#2e1065" opacity="0.8" />
+  
+  <!-- Calm Lake Water Ripples -->
+  <path d="M 26 62 Q 50 58 74 62" stroke="url(#lakeGlow)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M 32 68 Q 50 64 68 68" stroke="url(#lakeGlow)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85" />
+  <path d="M 38 74 Q 50 71 62 74" stroke="url(#lakeGlow)" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7" />
+  <path d="M 44 80 Q 50 78 56 80" stroke="url(#lakeGlow)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.55" />
+
+  <!-- Moon reflection light shimmer -->
+  <ellipse cx="60" cy="62" rx="4" ry="1" fill="#ffffff" opacity="0.8" />
+  <ellipse cx="58" cy="68" rx="5" ry="1" fill="#ffffff" opacity="0.6" />
+  <ellipse cx="56" cy="74" rx="3" ry="0.8" fill="#ffffff" opacity="0.4" />
+
+  <!-- Small floating lily pad -->
+  <ellipse cx="36" cy="63" rx="5" ry="2" fill="#c4b5fd" opacity="0.7" />
+</svg>

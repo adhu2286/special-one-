@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" fill="none">
+  <defs>
+    <linearGradient id="duskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#4c1d95" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0f0728" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="skylineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Sky Wash -->
+  <rect width="600" height="200" fill="url(#duskGrad)"/>
+
+  <!-- Stars / Twinkling points -->
+  <circle cx="80" cy="40" r="1.2" fill="#ffffff" opacity="0.6"/>
+  <circle cx="150" cy="25" r="1" fill="#f5d0fe" opacity="0.8"/>
+  <circle cx="280" cy="50" r="1.5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="420" cy="30" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="530" cy="45" r="1.2" fill="#f5d0fe" opacity="0.8"/>
+
+  <!-- Distant Subtle Skyline & Coastline Silhouette -->
+  <path d="M0 180 
+           L30 180 L30 160 L45 160 L45 180 
+           L80 180 L80 145 L95 145 L95 155 L110 155 L110 180 
+           L140 180 L150 135 L158 135 L165 180 
+           L190 180 L200 150 L220 150 L225 180 
+           L260 180 L275 125 L285 115 L295 125 L310 180 
+           L340 180 L345 160 L365 160 L370 180 
+           L400 180 L410 140 L425 140 L435 180 
+           L460 180 L470 150 L485 150 L490 180 
+           L520 180 L530 130 L545 130 L555 180 
+           L600 180 L600 200 L0 200 Z" 
+        fill="url(#skylineGrad)"/>
+
+  <!-- Coastal tide line at base -->
+  <path d="M0 188 Q150 183 300 189 T600 187" stroke="#a855f7" stroke-width="1" stroke-opacity="0.3"/>
+  <path d="M0 194 Q180 190 360 195 T600 193" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.2"/>
+</svg>

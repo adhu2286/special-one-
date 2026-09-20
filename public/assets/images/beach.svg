@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <!-- Night sky stars and crescent moon -->
+  <path d="M72 22 A8 8 0 0 0 64 30 A8 8 0 0 1 72 22 Z" fill="#fef08a"/>
+  <circle cx="28" cy="24" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="45" cy="18" r="1.2" fill="#ffffff" opacity="0.7"/>
+  <circle cx="82" cy="34" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <!-- Lighthouse beam far off -->
+  <path d="M15 42 L35 48 L15 54 Z" fill="rgba(254, 240, 138, 0.12)"/>
+  <!-- Shoreline / Ocean Waves -->
+  <path d="M10 52 C25 48, 45 56, 65 50 C75 47, 85 53, 90 51" stroke="url(#seaGrad)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M10 63 C30 58, 50 67, 70 61 C80 58, 88 64, 90 62" stroke="url(#seaGrad)" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M10 74 C28 69, 52 78, 72 72 C82 69, 87 75, 90 73" stroke="url(#seaGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Sandy shoreline -->
+  <path d="M10 85 C35 81, 60 88, 90 83" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <!-- Coastal breeze curves -->
+  <path d="M38 32 Q48 28 58 32" stroke="#d8b4fe" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+</svg>
